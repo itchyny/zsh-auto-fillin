@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 _auto-fillin() {
-  if [[ "$BUFFER" == *{{*}}* ]] && [[ "$BUFFER" != *fillin* ]]; then
+  if [[ "$BUFFER" == *{{[a-z]*}}* ]] && [[ "$BUFFER" != *fillin* ]]; then
     if [[ "$BUFFER" == *'$('* ]]; then
       BUFFER="fillin '${BUFFER}'"
     else
